@@ -61,7 +61,7 @@ body {
 }
 
 .content .comma {
-  color: #2c2d2b;
+  color: #f2f3f1;
   opacity: 1;
   animation: fadeOut 0.5s forwards 2.5s;
 }
