@@ -39,6 +39,11 @@ body {
   animation-fill-mode: forwards;
 }
 
+.logo{
+  width: 40px;
+  height: 40px;
+}
+
 .content {
   color: white;
   font-size: 10vw;
