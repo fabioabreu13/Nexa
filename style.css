@@ -1,123 +1,433 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+/* Common style start */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --themeRed: #15b628;
+  --gray: #efefef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
 body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
-  font-family: "Montserrat", sans-serif;
-  background-image: url(./assets/brminerios.jpg);
-  background-size: 100%;
+}
+
+p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.fullContainer {
+  width: 100%;
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
+  width: 1140px;
+  margin: auto;
+}
+
+.sectionTitle {
+  width: 300px;
+  border-bottom: 3px solid var(--themeRed);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 auto 50px;
+  position: relative;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.sectionTitle::after {
+  display: inline-block;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: var(--themeRed);
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(75% - 7px);
+  transform: rotate(45deg) translate(50%, 50%);
+  border: 3px solid #fff;
+}
+
+section {
+  padding: 100px 0;
   position: relative;
 }
 
-.background-image {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  /* background-image: url("https://www.nexaresources.com/wp-content/uploads/2023/08/ARIPUANA_SITE-2.png"); */
-  background-size: cover;
-}
+/* Common style end */
 
-.split-screen {
-  width: 50%;
-  /* background-color: #87989d; */
-  /* background-image: url(https://www.nexaresources.com/wp-content/uploads/2022/05/historia-2004.png); */
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+/* Home style start */
+
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
   z-index: 2;
-  animation: reduceSize 1.5s 0.5s, moveRight 1.5s 3s;
-  animation-fill-mode: forwards;
 }
 
-.logo{
-  width: 40px;
-  height: 40px;
+header .container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.content {
-  color: white;
-  font-size: 10vw;
+header .container .logo {
+  padding: 15px 0;
+  height: 75px;
+}
+
+header .container .logo img {
+  height: 100%;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  display: inline-block;
+  height: 75px;
+  line-height: 75px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: var(--themeRed);
+}
+
+.banner {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(./images/brminerios.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.banner h1 {
+  margin-top: 230px;
+  display: inline-block;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  width: 50%;
+  line-height: 4.2rem;
+  font-weight: 100;
+}
+.banner h1 span {
+  background-color: var(--themeRed);
+  display: inline-block;
+  line-height: 3.5rem;
+  padding: 0 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.banner p {
+  color: #fff;
+  width: 50%;
+  text-shadow: 0 0 2px #000;
+  margin-top: 10px;
+}
+
+/* Home style end */
+
+/* aboutSection start */
+#aboutSection .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+  height: 245px;
+}
+
+#aboutSection .cards > div {
+  width: 350px;
+  background-color: var(--gray);
+  padding: 35px;
+  color: #444;
+  text-align: center;
+  border-radius: 5px;
+  height: 215px;
+  border: 1px solid #ccc;
+  transition: 0.4s;
+}
+
+#aboutSection .cards > div:hover {
+  width: 400px;
+  margin-top: -20px;
+  border-color: var(--themeRed);
+  padding: 55px;
+  height: auto;
+}
+
+#aboutSection .cards > div .title {
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
+}
+
+#aboutSection .cards > div p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* aboutSection end */
+
+/* program Section Start */
+.programs {
+  background-color: #e2e2e2;
+}
+.programs .boxContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+}
+
+.programs .boxContainer .box {
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #c5c5c5;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.programs .boxContainer .box .cardImage {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+.programs .boxContainer .box .cardImage::after {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  content: "";
   position: absolute;
-  width: fit-content;
-  height: fit-content;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 4;
+  top: 0;
+  filter: grayscale(100%);
+  transition: 0.4s;
+}
+.programs .boxContainer .box:nth-child(1) .cardImage,
+.programs .boxContainer .box:nth-child(1) .cardImage::after {
+  background-image: url(./images/usar\ lucro.png);
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage,
+.programs .boxContainer .box:nth-child(2) .cardImage::after {
+  background-image: url(./images/usar\ ti.png);
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage,
+.programs .boxContainer .box:nth-child(3) .cardImage::after {
+  background-image: url(./images/usar\ mudas.jpg);
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage,
+.programs .boxContainer .box:nth-child(4) .cardImage::after {
+  background-image: url(./images/usar\ receita\ liquida\ .jpg);
+}
+
+.programs .boxContainer .box:hover .cardImage::after {
+  top: 100%;
+  transition: 0.4s;
+}
+
+.programs .boxContainer .box .programTitle {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #fff;
+
+  background-color: var(--themeRed);
+  display: inline-block;
+  line-height: 1.5rem;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.programs .boxContainer .box .donationCount {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 10px;
+}
+
+.programs .boxContainer .box .donationCount span {
+  color: var(--themeRed);
+}
+
+/* program Section End */
+
+/* education section start */
+.education {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.education .videoPlayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.education .sectionTitle {
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+}
+.education .educationContainer {
+  position: absolute;
+  background-color: #00000096;
+  width: 600px;
+  top: 35vh;
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+  padding: 30px;
+}
+.education .educationContainer h3 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.education.educationContainer p {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 10px 0 30px;
+}
+/* education section end */
+
+/* gallery start here */
+.gallery .galleryContainer {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+.gallery .galleryContainer .item {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.gallery .galleryContainer img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+.gallery .galleryContainer .title {
+  position: absolute;
+  background-color: var(--gray);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
   opacity: 0;
-  transform: translateY(100vh);
-  animation: fadeInUp 2s 0.5s, moveRight 1.5s 3s, changeBackground 1.5s 3s;
-  animation-fill-mode: forwards;
+  z-index: 1;
+  transition: 0.4s;
 }
-
-.content p {
-  margin: 0;
-}
-
-.content .comma {
-  color: #f2f3f1;
+.gallery .galleryContainer .item:hover .title {
   opacity: 1;
-  animation: fadeOut 0.5s forwards 2.5s;
+}
+.gallery .galleryContainer .item:hover img {
+  transform: scale(1.2);
+}
+/* gallery end here */
+
+/* join start here */
+.join {
+  background-image: url(./images/pattern.jpg);
+  color: #fff;
+}
+.join .joinTitle {
+  font-size: 40px;
+  font-weight: 100;
 }
 
-/* @keyframes reduceSize {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 50%;
-  }
-} */
-
-@keyframes fadeInUp {
-  from {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.join .joinTitle span {
+  font-weight: 800;
 }
 
-@keyframes moveRight {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 50%;
-  }
+/* join end here */
+
+/* footer start here */
+footer {
+  background-color: #181818;
+  color: #7f7f7f;
+  padding: 50px 0;
+  font-size: 14px;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
 
-@keyframes changeBackground {
-  to {
-    /* background-image: url("https://www.nexaresources.com/wp-content/uploads/2023/02/Resultados-2.jpg"); */
-    background-size: 200%;
-    background-position: center;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+footer .title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  margin-bottom: 30px;
+  padding: 0 0 5px 0;
 }
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .linksContainer ul {
+  list-style-type: none;
+}
+
+footer .linksContainer ul li a {
+  text-decoration: none;
+  color: #7f7f7f;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+footer .newsLetterContainer img {
+  height: 40px;
+  margin-bottom: 11px;
+}
+
+footer .newsLetterContainer input {
+  background-color: transparent;
+  border: 1px solid #7f7f7f;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  margin-top: 10px;
+  color: #ccc;
+  border-radius: 30px;
+}
+
+/* footer end here */
