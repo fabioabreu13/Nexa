@@ -374,6 +374,29 @@ header nav ul li a:hover {
   font-weight: 800;
 }
 
+.join label{
+  margin-left: 35%;
+  
+}
+
+.join input {
+  display: grid;
+  background-color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 10px 15px;
+  width: 31%;
+  margin: 15px 35%; 
+  border-radius: 30px;
+}
+
+.join button {
+  margin-top: 15px;
+  margin-left: 35%;
+  font-size: 15px;
+  width: 100px;
+}
+
 /* join end here */
 
 /* footer start here */
