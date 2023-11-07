@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BR Minérios</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="validacao.js"></script>
+
   </head>
   <body>
     <div class="fullContainer banner2" id="homeSection">
@@ -37,17 +39,18 @@
           
         </p>
         <div>
-          <br />
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Ensira seu nome*"/>
-          <label for="sobrenome">Sobrenome</label>
-          <input type="text" name="sobrenome" id="sobrenome" placeholder="Ensira seu sobrenome*"/>
-          <label for="email">Email</label>
-          <input type="email" placeholder="Ensira seu email*"/>
-        </div>
-        <div>
-          <button type="submit"><h3>Enviar</h3></button>
-        </div>
+    <form onsubmit="return validarFormulario()">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Insira seu nome*" />
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Insira seu sobrenome*" />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Insira seu email*" />
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+      
 
         <!-- <button class="joinNow">JOIN US</button>
         <button class="adoptBtn">ADOPT A CHILD</button> -->
