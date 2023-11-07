@@ -234,12 +234,12 @@ header nav ul li a:hover {
 }
 .programs .boxContainer .box:nth-child(1) .cardImage,
 .programs .boxContainer .box:nth-child(1) .cardImage::after {
-  background-image: url(./images/usar\ lucro.png);
+  background-image: url(./images/usar\ lucro.jpg);
 }
 
 .programs .boxContainer .box:nth-child(2) .cardImage,
 .programs .boxContainer .box:nth-child(2) .cardImage::after {
-  background-image: url(./images/usar\ ti.png);
+  background-image: url(./images/usar\ ti.jpg);
 }
 
 .programs .boxContainer .box:nth-child(3) .cardImage,
