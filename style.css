@@ -26,6 +26,16 @@ p {
   line-height: 26px;
 }
 
+.teste img {
+  width: 5vw;
+  height: 6vh;
+  position: relative;
+  margin: -50px 70px;
+  display: flex;
+  align-items: center;
+  
+}
+
 .fullContainer {
   width: 100%;
 }
@@ -374,9 +384,8 @@ header nav ul li a:hover {
   font-weight: 800;
 }
 
-.join label{
+.join label {
   margin-left: 35%;
-  
 }
 
 .join input {
@@ -386,7 +395,7 @@ header nav ul li a:hover {
   outline: none;
   padding: 10px 15px;
   width: 31%;
-  margin: 15px 35%; 
+  margin: 15px 35%;
   border-radius: 30px;
 }
 
