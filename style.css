@@ -33,6 +33,7 @@ p {
   margin: -50px 70px;
   display: flex;
   align-items: center;
+  
 }
 
 .fullContainer {
@@ -334,7 +335,6 @@ header nav ul li a:hover {
 
 /* gallery start here */
 .gallery .galleryContainer {
-  
   column-count: 4;
   column-gap: 20px;
 }
@@ -385,17 +385,17 @@ header nav ul li a:hover {
 }
 
 .join label {
-  /* margin-left: 35%; */
+  margin-left: 35%;
 }
 
 .join input {
-  display: flex;
+  display: grid;
   background-color: #fff;
   border: 1px solid #fff;
   outline: none;
   padding: 10px 15px;
-  /* width: 31%; */
-  /* margin: 15px 35%; */
+  width: 31%;
+  margin: 15px 35%;
   border-radius: 30px;
 }
 
@@ -408,82 +408,39 @@ header nav ul li a:hover {
 
 /* join end here */
 
-/*form start here*/
+/* INI carrossel autor: Itamar Maximo De Sena */
 
-.wrapper {
-  /* background-color: magenta; */
-  width: 100%;
-  display: flex;
-  border-radius: 10px;
-  padding: 15px;
-  background: transparent;
-  color: #ffff;
-  border-radius: 10px;
-  padding: 30px 40px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(08px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.wrapperLeft {
-  width: 50%;
-  padding: 20px;
-}
-
-.wrapperLeft p {
-  margin-top: 20px;
-  text-transform: bold;
-  
-}
-
-.wrapperRight {
-  width: 50%;
-  display: flex;
-}
-
-.wrapperRight form {
-  display: inline-block;
-  width: 100%;
-}
-
-.wrapperRight form input {
+#slider {
+  margin-right: 272px;
   width: 80%;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: #ffff;
-  padding: 20px 45px 20px 20px;
+  max-width: 610px;
+  height: 25vw;
+  max-height: 425px;
+
+  position: relative;
 }
 
-.wrapperRight form label {
-  padding-left: 25px;
+#slider img{
+  opacity: 0;
 
+  position: absolute;
+
+  width: 610px;
+  height: 425px;
+
+  object-fit: cover;
+
+  transition: opacity 800ms;
+  box-shadow: 3px 3px 5px black;
+  overflow: hidden;
+  border-radius: 0.4rem;
 }
 
-.wrapperRight input::placeholder {
-  color: #ffff;
-  font-size: 10px;
-  letter-spacing: 5px ;
+#slider img.selected { 
+  opacity: 1;
 }
-
-.btn-form {
-  width: 100%;
-  height: 45px;
-  background: #ffff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-}
-
-/*form end here*/
+  
+/* FIN carrossel autor: Itamar Maximo De Sena */
 
 /* footer start here */
 footer {
@@ -540,4 +497,3 @@ footer .newsLetterContainer input {
 }
 
 /* footer end here */
-
